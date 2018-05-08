@@ -1,5 +1,6 @@
 git:
-	1.初始化本地仓库	git init
+	1.初始化本地仓库	
+		git init
 	2.查看当前仓库的状态	
 		git status
 		git status -s  :获得简短的输出格式
@@ -11,4 +12,6 @@ git:
 	4.将文件添加到缓存区	
 		git add <fileName1> <fileName2>....    
 			文件要加上后缀名，否则会提示 '...' did not match any files
-	5.git commit -m 'commit detail'
+	5.将缓存区内容提交到仓库	
+		git commit -m 'commit detail'	-m 后面是提交的注释信息
+		git commit -a	可以直接跳过git add 步骤提交
