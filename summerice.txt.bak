@@ -14,4 +14,6 @@ git:
 			文件要加上后缀名，否则会提示 '...' did not match any files
 	5.将缓存区内容提交到仓库	
 		git commit -m 'commit detail'	-m 后面是提交的注释信息
+			如果没有写-m 和注释，会自动打开vim，来输入注释信息
+			按i然后输入注释信息，然后按ESC,输入  :wq  就可以退出vim
 		git commit -a	可以直接跳过git add 步骤提交

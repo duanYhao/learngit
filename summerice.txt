@@ -17,3 +17,6 @@ git:
 			如果没有写-m 和注释，会自动打开vim，来输入注释信息
 			按i然后输入注释信息，然后按ESC,输入  :wq  就可以退出vim
 		git commit -a	可以直接跳过git add 步骤提交
+	6.将文件从仓库删除
+		git rm <file>
+		git rm -f <file>	从缓存区删除
