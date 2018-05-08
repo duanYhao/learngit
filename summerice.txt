@@ -21,6 +21,9 @@ git:
 		git rm <file>
 		git rm -f <file>	从缓存区删除
 
+
+
+
 	分支管理：
 	1.创建分支
 		git branch <branchname>		手动创建分支
@@ -34,5 +37,4 @@ git:
 	4.删除分支
 		git branch -d <branchname>
 	5.合并分支
-		git merge <branchname>	合并到主分支
-	
+		git merge <branchname>	合并到主分支	
