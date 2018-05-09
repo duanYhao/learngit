@@ -76,7 +76,10 @@ git:
 
 		
 		1.从远程仓库下载新分支与数据：
-			git fetch
+			git fetch 主机名
+				到远程仓库中拉去本地仓库没有的数据
+				本地看不到任何的变化，但其实本地库对应的远程库的代码都已经更新了
+				git merge origin合并，本地就有数据了
 				
 			git pull
 				报错：fatal: refusing to merge unrelated histories
