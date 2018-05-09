@@ -1,0 +1,57 @@
+git:
+	1.初始化本地仓库	
+		git init
+	2.查看当前仓库的状态	
+		git status
+		git status -s  :获得简短的输出格式
+	3.查看具体修改的内容	
+		git diff <fileName>  
+		git diff  :查看尚未缓存的改动
+		git diff --cached	:查看已经缓存的改动
+		git diff HEAD	:查看未缓存与已缓存的改动
+	4.将文件添加到缓存区	
+		git add <fileName1> <fileName2>....    
+			文件要加上后缀名，否则会提示 '...' did not match any files
+	5.将缓存区内容提交到仓库	
+		git commit -m 'commit detail'	-m 后面是提交的注释信息
+			如果没有写-m 和注释，会自动打开vim，来输入注释信息
+			按i然后输入注释信息，然后按ESC,输入  :wq  就可以退出vim
+		git commit -a	可以直接跳过git add 步骤提交
+	6.将文件从仓库删除
+		git rm <file>
+		git rm -f <file>	从缓存区删除
+
+
+
+
+	分支管理：
+	1.创建分支
+		git branch <branchname>		手动创建分支
+		git init	默认创建master分支
+	2.列出分支
+		git branch
+	3.切换分支
+		git checkout <branchname>
+	3.创建并切换到分支
+		git checkout -b <branchname>
+	4.删除分支
+		git branch -d <branchname>
+	5.合并分支
+		git merge <branchname>	合并到主分支	
+	6.合并冲突
+		在合并时，会提示
+			Merge confilct in <file>
+			Automatic merge failed;fix conflicts and then commit the result.\
+		输入 cat <file> 可以查看冲突
+		然后输入vim <file>打开vim编辑输入i进行修改
+		然后退出vim
+		然后git add <file>
+		最后commit
+
+	远程库：
+		
+		git remote add origin git@github.com:duanYhao/xxx.git
+
+		提交到Github
+		git push -u origin master
+	
