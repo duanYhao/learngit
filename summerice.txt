@@ -54,6 +54,8 @@ git:
 
 		提交到Github
 		git push -u origin master
+
+		git push -f 会直接覆盖掉远程端的文件,使远程仓库回退到相应版本
 		
 		1.从远程仓库下载新分支与数据：
 			git fetch
