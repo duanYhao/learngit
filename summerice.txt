@@ -59,5 +59,9 @@ git:
 		
 		1.从远程仓库下载新分支与数据：
 			git fetch
+				
+			git pull
+				报错：fatal: refusing to merge unrelated histories
+				解决：git pull origin master ----allow-unrelated-histories
 		2.从远端仓库提取数据并尝试合并到当前分支
 			git merge
