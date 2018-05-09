@@ -49,19 +49,38 @@ git:
 		最后commit
 
 	远程库：
-		
-		git remote add origin git@github.com:duanYhao/xxx.git
+		1.添加远程库
+			git remote add 别名	url
+			eg:git remote add origin git@github.com:duanYhao/xxx.git
+			url：两种形式
+				1.HTTPS
+					url以https://开头
+					每次提交都要输入用户名及密码，比较麻烦
+				2.SSH
+					url以git@github.com开头
+					可以直接提交
 
-		提交到Github
-		git push -u origin master
 
-		git push -f 会直接覆盖掉远程端的文件,使远程仓库回退到相应版本
+			git remote -v/--verbose  可以查看已添加的远程库
+		2.删除远程库
+			git remote remove 别名
+		3.重命名远程库
+			git remote rename 原名 新名
+		4.查看指定主机的详细信息
+			git remote show 别名
+
+			提交到Github
+			git push -u origin master
+
+			git push -f 会直接覆盖掉远程端的文件,使远程仓库回退到相应版本
+
 		
 		1.从远程仓库下载新分支与数据：
 			git fetch
 				
 			git pull
 				报错：fatal: refusing to merge unrelated histories
+				原因：因为远程仓库origin上的分支master和本地分支master被Git认为是不同的仓库，所以不能直接合并。
 				解决：git pull origin master --allow-unrelated-histories
 		2.从远端仓库提取数据并尝试合并到当前分支
 			git merge
