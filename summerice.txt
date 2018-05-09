@@ -47,3 +47,15 @@ git:
 		然后退出vim
 		然后git add <file>
 		最后commit
+
+	远程库：
+		
+		git remote add origin git@github.com:duanYhao/xxx.git
+
+		提交到Github
+		git push -u origin master
+		
+		1.从远程仓库下载新分支与数据：
+			git fetch
+		2.从远端仓库提取数据并尝试合并到当前分支
+			git merge

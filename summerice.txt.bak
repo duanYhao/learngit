@@ -38,3 +38,20 @@ git:
 		git branch -d <branchname>
 	5.合并分支
 		git merge <branchname>	合并到主分支	
+	6.合并冲突
+		在合并时，会提示
+			Merge confilct in <file>
+			Automatic merge failed;fix conflicts and then commit the result.\
+		输入 cat <file> 可以查看冲突
+		然后输入vim <file>打开vim编辑输入i进行修改
+		然后退出vim
+		然后git add <file>
+		最后commit
+
+	远程库：
+		
+		git remote add origin git@github.com:duanYhao/xxx.git
+
+		提交到Github
+		git push -u origin master
+	
